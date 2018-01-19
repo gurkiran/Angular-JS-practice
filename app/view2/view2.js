@@ -42,7 +42,6 @@ angular.module('myApp.view2', ['ngRoute'])
         $scope.displayData[arr] = _.sortBy($scope.displayData[arr], 'category');
       }      
 
-      console.log($scope.displayData);
 
     })
 }]);
