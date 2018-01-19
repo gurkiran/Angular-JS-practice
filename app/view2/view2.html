@@ -1,0 +1,13 @@
+<div class='task'>
+  <table>
+    <th>Name</th>
+    <th ng-repeat='category in categories'>{{category}}</th>
+    <tr ng-repeat='(key,value) in displayData'>
+      <td>{{key}}</td>
+      <td ng-repeat='val in value'>
+        {{ val.amount ? val.amount : '-'  }}
+      </td>
+    </tr>
+  </table>
+</div>
+

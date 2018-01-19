@@ -1,0 +1,12 @@
+<div class='task'>
+<table>
+    <th style='cursor:pointer;' ng-click='changeSort("name")'>Name</th>
+    <th style='cursor:pointer;' ng-click='changeSort("category")'>Category</th>
+    <th style='cursor:pointer;' ng-click='changeSort("amount")'>Amount</th>
+    <tr style='cursor:pointer;' ng-repeat="datum in data | orderBy:sorting.column:sorting.desc">
+        <td>{{datum.name}}</td>
+        <td>{{datum.category}}</td>
+        <td>{{datum.amount}}</td>
+    </tr>
+  </table>
+</div>

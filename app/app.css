@@ -1,0 +1,64 @@
+/* app css stylesheet */
+
+.menu {
+  width: 200px;
+  list-style: none;
+  padding: 0 0 0.5em;
+  position: absolute;
+  text-align: center;
+  bottom: 100px;
+  margin: 0 auto; 
+  left: 50%;
+  margin-left: -100px;
+}
+
+.menu > li {
+  display: inline;
+  font-size: 30px;
+}
+
+.menu > li:hover {
+  background: #eee;
+}
+
+.menu > li a {
+  color: black;
+  text-decoration: none;
+}
+
+
+.menu > li a:visited {
+  color: black;
+}
+
+.menu > li + li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+div.task {
+  width: 50vw;
+  margin: 0 auto;
+  border: 1px solid #eee;
+  padding: 10px;
+  box-shadow: 10px 10px 10px 10px #eee;
+  transform: rotateY(15deg);
+  position: absolute;
+  left: 50%;
+  margin-left: -25vw;
+  top: 10vh;
+  transition: transform 1s;
+}
+
+div.task:hover {
+  transform: none;
+}
+
+div.task table {
+  margin: 0 auto;
+  width: 100%;
+}
+
+div.task table tr:first-child {
+  text-align: left;
+}
