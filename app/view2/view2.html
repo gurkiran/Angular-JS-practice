@@ -1,13 +1,36 @@
-<div class='task'>
+<!-- 1st approach -->
+
+<!-- <div class='task'>
   <table>
     <th>Name</th>
     <th ng-repeat='category in categories'>{{category}}</th>
-    <tr ng-repeat='(key,value) in displayData'>
+    <tr ng-repeat='(key,value) in displayData '>
       <td>{{key}}</td>
       <td ng-repeat='val in value'>
-        {{ val.amount ? val.amount : '-'  }}
+        {{ val.amount  }}
       </td>
     </tr>
   </table>
+</div> -->
+
+
+
+<!-- Alternative approach (sorted)  -->
+
+
+<div class='task'>
+<table>
+  <th>Name</th>
+  <th ng-repeat='category in categories'>{{category}}</th>
+  <div hidden>{{haha | json}}</div>
+  <tr ng-repeat='item in toArray track by $index'>
+    <td>{{item[0].name}}</td>
+    <td ng-repeat='val in item'>
+      {{ val.amount }}
+    </td>
+  </tr>
+</table>
 </div>
+
+
 

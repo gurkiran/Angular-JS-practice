@@ -25,6 +25,9 @@ angular.module('myApp.view2', ['ngRoute'])
 
       $scope.categories.sort();
 
+
+
+
       $scope.displayData = _.groupBy($scope.data, 'name');
 
 
@@ -36,12 +39,19 @@ angular.module('myApp.view2', ['ngRoute'])
           })
           var diff = _.difference($scope.categories, compare);
           for(let i = 0; i < diff.length; i++) {
-            $scope.displayData[arr].push({category: diff[i]});
+            $scope.displayData[arr].push({ "name": arr ,category: diff[i], amount: '-'});
           }
         }
         $scope.displayData[arr] = _.sortBy($scope.displayData[arr], 'category');
-      }      
+      }           
+      
+      console.log($scope.displayData);
 
+      // Another approach ( For sorted output )
 
+      $scope.toArray = Object.keys($scope.displayData)
+        .sort()
+        .map(key => $scope.displayData[key])
     })
+
 }]);
